@@ -1,0 +1,187 @@
+/* Chatbot.module.css */
+
+.chatbotContainer {
+  display: flex;
+  height: 100vh;
+  padding: 20px 0; /* 위 아래 여백 추가 */
+  background-color: #f0f2f5;
+  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hideSidebar {
+  transform: translateX(-100%);
+}
+
+.darkModeButton {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.darkModeButton:hover {
+  background-color: #555;
+}
+
+.chatHistory {
+  margin-top: 20px;
+}
+
+.historyItem {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.chatMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.chatWindow {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* 아래쪽 여백 추가 */
+  transition: background-color 0.3s, border-color 0.3s; /* 배경색, 테두리색 전환 애니메이션 */
+}
+
+.chatMessage {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  white-space: pre-wrap; /* 메시지가 줄바꿈되도록 설정 */
+  word-break: break-word; /* 단어가 너무 길면 줄바꿈하도록 설정 */
+  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
+}
+
+.user {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+
+.bot {
+  background-color: #f8d7da;
+  align-self: flex-start;
+}
+
+.chatInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px; /* 위쪽 여백 추가 */
+}
+
+.chatInputText {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, border-color 0.3s; /* 배경색, 테두리색 전환 애니메이션 */
+}
+
+.chatInputButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #2db400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
+}
+
+.chatInputButton:hover {
+  background-color: #249c00;
+}
+
+.chatInputFile {
+  margin-left: 10px;
+}
+
+.fixedText {
+  font-weight: bold;
+}
+
+/* 다크 모드 스타일 */
+.darkMode .chatbotContainer {
+  background-color: #1e1e1e;
+}
+
+.darkMode .chatWindow {
+  background-color: #2e2e2e;
+  border-color: #555;
+}
+
+.darkMode .chatMessage.user {
+  background-color: #4d7c71;
+}
+
+.darkMode .chatMessage.bot {
+  background-color: #7c4d4d;
+}
+
+.darkMode .chatInputText {
+  background-color: #3e3e3e;
+  border-color: #555;
+  color: white;
+}
+
+.darkMode .chatInputButton {
+  background-color: #3cba00;
+}
+
+.darkMode .chatInputButton:hover {
+  background-color: #2a9c00;
+}
+
+.darkMode .chatMessage {
+  color: white;
+}
+
+.darkMode .sidebar {
+  background-color: #2e2e2e;
+}
+
+.darkMode .historyItem {
+  color: white;
+  border-color: #555;
+}
+
+/* 사이드바 숨기기 버튼 스타일 */
+.toggleSidebarButton {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggleSidebarButton:hover {
+  background-color: #555;
+}
